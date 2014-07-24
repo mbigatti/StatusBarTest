@@ -54,7 +54,8 @@
     UIViewController *controller = (UIViewController*)segue.destinationViewController;
     
     // this line cause the bug
-    //controller.modalPresentationStyle = UIModalPresentationCustom;
+    controller.modalPresentationStyle = UIModalPresentationCustom;
+    controller.modalPresentationCapturesStatusBarAppearance = YES;
     
     controller.transitioningDelegate = self;
 }
